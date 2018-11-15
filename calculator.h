@@ -1,6 +1,6 @@
 class Calculator
 {
     public:
-        int Add (int, int);
-        int Mul (double, double);
+        static int Add (int, int);
+        static int Mul (double, double);
 };
