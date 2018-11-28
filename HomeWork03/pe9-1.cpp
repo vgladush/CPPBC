@@ -8,11 +8,11 @@ void setGolf(golf& g, const char* name, int hc) {
 
 int setGolf(golf& g) {
 	std::string nm;
-	std::cout << "input fullname: ";
+	std::cout << "enter fullname: ";
 	std::getline(std::cin, nm);
 	bzero(g.fullname, Len);
 	memcpy(g.fullname, nm.c_str(), (nm.size() < Len ? nm.size() : Len - 1));
-	std::cout << "input handicap: ";
+	std::cout << "enter handicap: ";
 	std::getline(std::cin, nm);
 	try {
 		g.handicap = std::stod(nm);

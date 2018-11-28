@@ -1,6 +1,6 @@
 #include "move.h"
 
-int main(int argc, char const *argv[])
+int main()
 {
 	Move m1(25.67, 38.5);
 	Move m2; // default 0 0
