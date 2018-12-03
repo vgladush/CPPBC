@@ -1,4 +1,5 @@
 #include "game.h"
+#include <iostream>
 
 Game::Game()
 {
@@ -56,8 +57,8 @@ void	Game::minesweeper()
 			game = 3;
 		}
 		wattron(win, COLOR_PAIR(10));
-		mvwprintw(win, ey * 2 + 8, ex * 4 + 8, " %c ", vis[ey][ex]);
-		mvwprintw(win, ey * 2 + 9, ex * 4 + 8, "___");
+		mvwprintw(win, ey * 2 + 8, ex * 4 + 7, "| %c |", vis[ey][ex]);
+		mvwprintw(win, ey * 2 + 9, ex * 4 + 7, "|___|");
 		wattroff(win, COLOR_PAIR(10));
 		vic += (game == 3 ? 0 : 1);
 		if (vis[ey][ex] == ' ')
@@ -125,7 +126,7 @@ void Game::run_mine()
 {
 	for (int i = 0; i < y; ++i)
 	{
-		bzero(vis[i], x + 1);
+		std::fill(vis[i], vis[i] + x + 1, 0);
 		std::fill(gm[i], gm[i] + x, ' ');
 		gm[i][x] = 0;
 	}

@@ -7,12 +7,11 @@
 #define BOMBS 15
 
 #include <ncurses.h>
-#include "unistd.h"
-#include <iostream>
-#include <string.h>
-#include <cstdlib>
+/* to work with the library on the linux platform (ubuntu 16.04), you need to install it:
+sudo apt-get install libncurses5-dev libncursesw5-dev
+*/
 
-class Game 
+class Game
 {
 
 public:
