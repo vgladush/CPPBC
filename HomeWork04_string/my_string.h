@@ -14,10 +14,16 @@ public:
 	My_string &append(const char * s);
 	~My_string();
 	void	clear();
+	void	resize(size_t n, char c = 0);
 	void	swap(My_string & s);
 	char	*c_str() const;
 	size_t	length() const;
+	size_t	substr(const My_string &s) const;
+	size_t	substr(const char *s) const;
 	int		compare(const My_string & s) const;
+	My_string & insert(size_t pos, const My_string &s);
+	My_string & insert(size_t pos, const char *s);
+	My_string & insert(size_t pos, const char c);
 
 	char	operator[](int i) const;
 	char	& operator[](int i);
@@ -29,7 +35,7 @@ public:
 	My_string operator + (const char *s);
 	bool operator == (const My_string & s) const;
 	bool operator != (const My_string & s) const;
-	
+
 private:
 	char	*str;
 	size_t	size;
