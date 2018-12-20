@@ -1,4 +1,4 @@
-#include "wine_comp.h"
+#include "wine_priv.h"
 
 int main() {
 	using std::cin;
