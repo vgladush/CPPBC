@@ -1,0 +1,4 @@
+#ifndef BC_SHARED_PTR_HPP
+#define BC_SHARED_PTR_HPP
+
+#endif // BC_SHARED_PTR_HPP
